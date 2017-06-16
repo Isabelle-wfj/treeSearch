@@ -1,0 +1,51 @@
+@charset "utf-8";
+html, body, form, th, td, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, input, textarea, button, select { margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:400; }
+ul, ol { list-style:none; }
+input, button { outline:none; }
+input, textarea, button, select { font-size:100%; font-family:'microsoft yahei'; }
+img { -ms-interpolation-mode:bicubic; border:0; vertical-align:middle; }
+a { cursor:pointer; text-decoration:none; }
+a:hover { text-decoration:underline; }
+i, em { font-style:normal; }
+.fr{float:right}
+.fl{float:left}
+.mr{margin-right:5px}
+
+
+.ui-form-fields { width:100%; border-collapse:collapse; border:0; }
+.ui-form-fields td { padding:5px; line-height:24px; font-weight:700; }
+.ui-form-fields td.field { padding-right:0; text-align:right; white-space:nowrap; color:#333; }
+.ui-form-fields td.field label { display:inline-block; }
+.ui-treeselectbox .ui-treeselectbox-box { position:absolute; top:22px; left:-1px; right:-1px; width:100%; border:1px solid #3f86c9; background-color:#fff; overflow:hidden; }
+
+.ui-treeselectbox .ui-treeselectbox-box .buttons { border-top:1px solid #3f86c9; background:url(../images/bg1.gif) #e5e5e5 repeat-x 0 -20px; padding:5px; overflow:hidden; line-height:1; }
+.ui-treeselectbox .ui-treeselectbox-box .buttons .ui-search-button{ font-weight: 100; height:24px; line-height:24px;}
+.ui-treeselectbox .ui-treeselectbox-box .buttons .ui-search-button .ui-button-text{height:24px; line-height:24px;}
+.ui-treeselectbox .ui-treeselectbox-box .options { width:100%; height:186px; overflow:auto; }
+.ui-treeselectbox .ui-treeselectbox-box .buttons div { width:200px; }
+.ui-treeselectbox .ui-treeselectbox-box .buttons div .ui-check { margin:0 5px 2px 0; -margin-bottom:0; }
+.ui-treeselectbox .ui-treeselectbox-box .search  { border-top:1px solid #3f86c9; background:url(../images/bg1.gif) #e5e5e5 repeat-x 0 -20px; padding:5px; overflow:hidden; line-height:1; }
+.ui-treeselectbox .ui-treeselectbox-box .search .search-content{ position:absolute; top:0; left:0; width:100%; background:#fff; overflow-y:auto;}
+.ui-treeselectbox .ui-treeselectbox-box .search .search-content table tr:hover{ background:#3f86c9; color:#fff;}
+.ui-treeselectbox .ui-treeselectbox-box .search .search-content table td{ border-bottom:1px dotted #bfcae0; line-height:18px;}
+.ui-treeselectbox .ui-treeselectbox-box .load { background:url(../images/load.gif) no-repeat center center; overflow:hidden; line-height:188px; }
+.ui-treeselectbox .ui-treeselectbox-box .failed { padding:20px 10px; overflow:hidden; line-height:24px; text-align:center; color:#f00; }
+.ui-treeselectbox .ui-treeselectbox-box .options.nobg .no-hasData{height:186px; line-height:186px; text-align:center; color:#b4b4b5; font-size:14px;font-weight: 500;}
+.ui-text { position:relative; display:block; height:22px; border:1px solid #b6c4d8; background-color:#fff; padding:0; vertical-align:middle; }
+.ui-text-text { width:100%; height:22px; -height:20px; border:0; margin:0; padding:0; word-wrap:break-word; word-break:break-all; line-height:22px; -line-height:20px; font-size:12px; font-weight:700; }
+
+.ui-text-icon { position:absolute; top:0; right:0; display:block; width:22px; height:22px; overflow:hidden; text-indent:-100px; }
+.ui-text-select { background:url(../images/select.gif) no-repeat 0 0; }
+.ui-text:hover .ui-text-select, .ui-text-hover .ui-text-select { background-position:-22px 0; }
+
+.ui-search-button { -moz-user-select:none; cursor:pointer; display:inline-block; height:30px; border:1px solid #448e05; background:#ffc719 url(../images/ui/buttons.gif) 0 -99px; padding:0 10px; overflow:hidden; vertical-align:middle; color:#fff; line-height:30px;}
+.ui-search-button.samll{height:26px;line-height:26px;}
+.ui-search-button-text { cursor:pointer; float:left; display:block; height:30px; overflow:hidden; line-height:30px; font-size:14px; }
+.ui-search-button.samll .ui-search-button-text{height:26px;line-height:26px;font-size:13px;}
+.ui-search-button-hover { border-color:#619c25; background-position:0 -132px; }
+.ui-search-button-active { border-color:#448e05; background-position:0 -165px; }
+.ui-search-button-clean { border-color:#b6c4d8; background:#f2f7ff url(../images/buttons.gif) 0 -297px; color:#3d3d3d; }
+.ui-search-button-clean-hover { border-color:#b6c4d8; background-position:0 -330px; }
+.ui-search-button-clean-active { border-color:#b6c4d8; background-position:0 -363px; }

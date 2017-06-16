@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>下拉树形选择框</title>
+		<link type="text/css" rel="stylesheet" href="../css/treeselect.css" />
+	</head>
+
+	<body>
+
+		<form id="form" method="post" action="">
+			<table class="ui-form-fields">
+				<tbody>
+					<tr>
+						<td class="field" width="5%">
+							<label>下拉树搜索：</label>
+						</td>
+						<td width="20%">
+							<div class="ui-text ui-treeselectbox">
+								<input id="ddmc" title="" ddid="" class="ui-text-text" readonly="readonly" type="text">
+								<i class="ui-text-icon ui-text-select"></i>
+							</div>
+						</td>
+						<td width="75%"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<script type="text/javascript" src="../js/jQuery/jquery-1.8.3.js"></script>
+		<script type="text/javascript" src="../js/treeselectbox.js"></script>
+		<script type="text/javascript">
+			$('#ddmc').treeselectbox({
+				treeId: 'ddmcTree',
+				method:'GET',
+				url:'../data/tree.txt',
+				searchInput: true,//是否提供搜索
+				showAction: true,//是否显示按钮
+				checkEnable: true,//是否复选
+				checkReaction: { 'Y': '','N': '' },//父子级关系
+				onCheck: function(e, treeId, node) {
+					//赋值
+					var zTree = jQuery.fn.zTree.getZTreeObj(treeId),
+						nodes = zTree.getCheckedNodes(true),
+						nodesLen = nodes.length,
+						text = [],
+						value = [];
+					for(var j = 0; j < nodesLen; j++) {
+						var nd = nodes[j];
+						text.push(nd.name);
+						value.push(nd.id);
+					}
+					jQuery('#ddmc').val(text.join(','));
+					$('#ddmc').attr("title", text.join(','));
+					$('#ddmc').attr("ddid", value.join(','));
+				},
+				onTextClick: function(treeId) {
+					//根据文本框内的值初始化选中节点
+					var val;
+					var ddid = $('#ddmc').attr("ddid");
+					if(ddid) {
+						var zTree = $.fn.zTree.getZTreeObj(treeId);
+						var cids = ddid.split(",");
+						var clen = cids.length;
+						for(var i = 0; i < clen; i++) {
+							val = cids[i];
+							var node = zTree.getNodeByParam('id', val, null);
+							zTree.checkNode(node, true, true);
+							var pnode = node.getParentNode();
+							zTree.expandNode(pnode, true, false, true);
+						}
+					}
+				}
+			});
+		</script>
+	</body>
+
+</html>
